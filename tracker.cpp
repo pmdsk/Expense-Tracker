@@ -72,7 +72,7 @@ void ExpenseTracker::deleteExpense(int id) {
 void ExpenseTracker::searchByCategory(string category) {
     if (categoryMap.count(category)) {
         for (auto &e : categoryMap[category]) {
-            cout << e.id << " | " << e.name << " | " << e.date << " | ₹" << e.amount << "\n";
+            cout << e.id << " | " << e.name << " | " << e.date << " | Rs." << e.amount << "\n";
         }
     } else {
         cout << "No expenses found in this category."<<endl;
@@ -82,7 +82,7 @@ void ExpenseTracker::searchByCategory(string category) {
 void ExpenseTracker::searchByDate(string date) {
     if (dateMap.count(date)) {
         for (auto &e : dateMap[date]) {
-            cout << e.id << " | " << e.name << " | " << e.category << " | ₹" << e.amount << "\n";
+            cout << e.id << " | " << e.name << " | " << e.category << " | Rs." << e.amount << "\n";
         }
     } else {
         cout << "No expenses found on this date."<<endl;
@@ -91,7 +91,7 @@ void ExpenseTracker::searchByDate(string date) {
 
 void ExpenseTracker::viewAll() {
     for (auto &e : expenses) {
-        cout << e.id << " | " << e.name << " | " << e.category << " | " << e.date << " | ₹" << e.amount << "\n";
+        cout << e.id << " | " << e.name << " | " << e.category << " | " << e.date << " | Rs." << e.amount << "\n";
     }
 }
 
